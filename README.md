@@ -64,10 +64,10 @@ Your notebook                 Host 1                    Host 2
 │  PULL ◄──────┼── ZMQ ──┤► PUSH        │         │  PUSH ◄──────┤── ZMQ ──┘
 │  (logs)      │         │  (log lines) │         │  (log lines) │
 │              │         │              │         │              │
-│              │         │ ├─ worker 0  │        │  ├─ worker 4 │
-│              │         │ ├─ worker 1  │        │  ├─ worker 5 │
-│              │         │ ├─ worker 2  │        │  ├─ worker 6 │
-│              │         │ └─ worker 3  │        │  └─ worker 7 │
+│              │         │ ├─ worker 0  │         │  ├─ worker 4 │
+│              │         │ ├─ worker 1  │         │  ├─ worker 5 │
+│              │         │ ├─ worker 2  │         │  ├─ worker 6 │
+│              │         │ └─ worker 3  │         │  └─ worker 7 │
 └──────────────┘         └──────────────┘         └──────────────┘
 ```
 
