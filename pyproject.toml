@@ -1,0 +1,24 @@
+[project]
+name = "torchpod"
+version = "0.1.2"
+description = "Distributed training from a notebook. One decorator. No config files."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "pyzmq>=25.0",
+    "cloudpickle>=3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/nikitos/herd"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["torchpod"]
+
+[tool.hatch.build.targets.sdist]
+include = ["torchpod/", "README.md", "LICENSE"]
