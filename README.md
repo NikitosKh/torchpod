@@ -1,9 +1,10 @@
 # torchpod
 
-Launch distributed PyTorch training straight from a Jupyter notebook. One decorator, no config files, no SLURM, no bash scripts. Built for researchers and startups running bare-metal GPU clusters who just want to train.
+Launch distributed PyTorch training straight from a Jupyter notebook. One decorator, no config files, no SLURM, no bash scripts. Built for researchers and startups running bare-metal GPU clusters who just want to train. Somewhat inspired by [Monarch](https://github.com/pytorch-labs/monarch)
 
 ```
 pip install torchpod
+uv add torchpod
 ```
 
 ## Quickstart
@@ -63,10 +64,10 @@ Your notebook                 Host 1                    Host 2
 │  PULL ◄──────┼── ZMQ ──┤► PUSH        │         │  PUSH ◄──────┤── ZMQ ──┘
 │  (logs)      │         │  (log lines) │         │  (log lines) │
 │              │         │              │         │              │
-│              │         │  ├─ worker 0  │         │  ├─ worker 4 │
-│              │         │  ├─ worker 1  │         │  ├─ worker 5 │
-│              │         │  ├─ worker 2  │         │  ├─ worker 6 │
-│              │         │  └─ worker 3  │         │  └─ worker 7 │
+│              │         │ ├─ worker 0  │        │  ├─ worker 4 │
+│              │         │ ├─ worker 1  │        │  ├─ worker 5 │
+│              │         │ ├─ worker 2  │        │  ├─ worker 6 │
+│              │         │ └─ worker 3  │        │  └─ worker 7 │
 └──────────────┘         └──────────────┘         └──────────────┘
 ```
 
